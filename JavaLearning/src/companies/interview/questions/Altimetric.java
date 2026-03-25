@@ -22,6 +22,7 @@ public class Altimetric {
                 num += ch;
             }
         }
+        
         return Integer.parseInt(num);
     }
 
