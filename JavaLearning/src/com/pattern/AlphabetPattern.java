@@ -1,4 +1,4 @@
-package com.learn;
+package com.pattern;
 
 public class AlphabetPattern {
 

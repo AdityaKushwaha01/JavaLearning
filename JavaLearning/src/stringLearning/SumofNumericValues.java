@@ -9,7 +9,7 @@ public class SumofNumericValues {
         
         int sum = 0;
         for (String num : numbers) {
-        	System.out.println(num);
+        	
             if (!num.isEmpty()) {
                 sum += Integer.parseInt(num);
             }

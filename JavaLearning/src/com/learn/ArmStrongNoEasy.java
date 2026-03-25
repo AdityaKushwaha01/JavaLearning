@@ -6,13 +6,13 @@ public class ArmStrongNoEasy {
 		// TODO Auto-generated method stub
 		
 		int num = 153;
-		int temp,sum=0,count;
+		int temp,sum=0,digit;
 		
 		temp = num;
 		while(num>0) {
-			count = num%10;
+			digit = num%10;
 			num=num/10;
-			sum = sum+(count*count*count);
+			sum = sum+(digit*digit*digit);
 		}
 		
 		if(temp==sum) {

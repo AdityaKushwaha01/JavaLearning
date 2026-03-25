@@ -1,19 +1,19 @@
 package com.learn;
 
-import java.util.HashSet;
 
 public class Practices {
 	public static void main(String[] args) {
-		
-		int num = 1234;
-		int rev=0;
-		
-		
-		while (num!=0) {
-			rev = rev*10;
-			rev = rev + num%10;
-			num = num/10;
+
+		for(int i =2;i<=20;i++) {
+			for (int j = 2; j <=Math.sqrt(i); j++) {
+				if(i%j==0) {
+					System.out.println(i);
+					break;
+				}
+			}
 		}
-		System.out.println(rev);
 	}
 }
+
+//input: [1,2,3,4,5,6 ,7] and n=3;
+//Output: [5,6,7,1,2,3,4]

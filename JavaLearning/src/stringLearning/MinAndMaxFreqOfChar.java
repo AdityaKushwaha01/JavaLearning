@@ -9,32 +9,27 @@ public class MinAndMaxFreqOfChar {
 		
 		String str ="String Examples sss";
 		
-		Map<Character, Integer> charfrq =  new HashMap<>();
-		
-		for (char c : str.toCharArray()) {
-			charfrq.put(c,charfrq.getOrDefault(c, 0) +1);
-			
-		}
-		char minChar = '\0', maxChar = '\0';
-		int minfreq = Integer.MAX_VALUE,maxfreq = Integer.MIN_VALUE;
-		
-		
-		for (Map.Entry<Character, Integer> entry : charfrq.entrySet()) {
-			int frequency = entry.getValue();
-			char character = entry.getKey();
-			
-			
-			if (frequency<minfreq) {
-				minfreq =frequency;
-				minChar = character;
-			}
-			if (frequency>maxfreq) {
-				maxfreq =frequency;
-				maxChar = character;
-			}
-		}
-		System.out.println(minChar +" "+minfreq);
-		System.out.println(maxChar +" "+maxfreq);
+		 Map<Character,Integer> mp = new HashMap<>();
+	        for(char c:str.toCharArray()){
+	            mp.put(c,mp.getOrDefault(c,0)+1);
+	        }
+	        char mostfreq=str.charAt(0);
+	        char minfreq=str.charAt(0);
+	        int max=Integer.MIN_VALUE;
+	        int min=Integer.MAX_VALUE;
+	        for(Map.Entry<Character,Integer> ent:mp.entrySet()){
+	            if(ent.getValue()>max){
+	                mostfreq=ent.getKey();
+	                max=ent.getValue();
+	            }
+	            else if(ent.getValue()<min) {
+	            	minfreq=ent.getKey();
+	            	min=ent.getValue();
+	            }
+	            
+	        }
+	        
+	        System.out.println(mostfreq+" "+minfreq);
 	}
 
 }

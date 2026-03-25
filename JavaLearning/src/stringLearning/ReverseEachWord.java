@@ -14,9 +14,9 @@ public class ReverseEachWord {
 					revword = revword+word.charAt(j);
 				}
 				revSent = revSent+revword+" ";
-				System.out.println(revSent);
+				
 			}
-			
+			System.out.println(revSent);
 	}
 
 }
